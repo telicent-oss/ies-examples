@@ -1,0 +1,52 @@
+@prefix ies: <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix data: <http://example.com/local-data#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+
+data:personA    a   ies:Person .
+data:personB    a   ies:Person .
+
+
+data:device1inCommunication a   ies:DeviceInCommunication ;
+    ies:isParticipationOf   data:mobiledevice1 ;
+    ies:isParticipantIn     data:calleeEvent ;
+    ies:isIdentifiedBy      data:telephonenumber1 .
+
+data:mobiledevice1  a   ies:MobileHandset ;
+    ies:isIdentifiedBy  data:imei1 .
+
+data:imei1  a   ies:imei ;
+    ies:representationValue "35-209900-176148-1"^^xsd:string .
+
+data:telephonenumber1   a   ies:TelephoneNumber ;
+    ies:representationValue "+447912345678"^^xsd:string .
+
+data:device2inCommunication a   ies:DeviceInCommunication ;
+    ies:isParticipationOf   data:mobiledevice2 ;
+    ies:isParticipantIn     data:callerEvent ;
+    ies:isIdentifiedBy      data:telephonenumber2 .
+
+data:mobiledevice2  a   ies:MobileHandset ;
+    ies:isIdentifiedBy  data:imei2 .
+
+data:imei2  a   ies:imei ;
+    ies:representationValue "49-015420-323751-8"^^xsd:string .
+
+data:telephonenumber2   a   ies:TelephoneNumber ;
+    ies:representationValue "+447712345678"^^xsd:string .
+
+data:personAinCommunication a   ies:PersonInCommunication ;
+    ies:isParticipationOf   data:personA ;
+    ies:isParticipantIn     data:calleeEvent .
+
+data:personBinCommunication a       ies:PersonInCommunication ;
+    ies:isParticipationOf   data:personB ;
+    ies:isParticipantIn     data:callerEvent .
+
+data:calleeEvent     a  ies:Callee ;
+    ies:isPartOf    data:voicecallEvent .
+
+data:callerEvent    a   ies:Caller ;
+    ies:isPartOf    data:voicecallEvent .
+
+data:voicecallEvent a   es:VoiceCall .

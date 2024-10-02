@@ -1,0 +1,26 @@
+@prefix ies: <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix iso8601: <http://iso.org/iso8601#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ont: <http://example.com/local-ontology#> .
+@prefix data: <http://example.com/local-data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ont:UniqueDeliveryPointReference rdfs:subClassOf ies:GeoIdentity .
+
+data:10DowningStreet    a   ies:Address ;
+    ies:isIdentifiedBy      data:10DowningStreetFLoA ;
+    ies:isIdentifiedBy      data:10DowningStreetLoA ;
+    ies:isIdentifiedBy      data:10DowningStreetPC ;
+    ies:isIdentifiedBy      data:10DowningStreetUDPR .
+
+data:10DowningStreetFLoA a  ies:FirstLineOfAddress ;
+ 	ies:representationValue "10 Downing Street"^^xsd:string .
+
+data:10DowningStreetLoA a   ies:LineOfAddress ;
+ 	ies:representationValue "White Hall, London"^^xsd:string .
+
+data:10DowningStreetPC  a   ies:PostalCode ;
+ 	ies:representationValue "SW1A 2AA"^^xsd:string .
+
+data:10DowningStreetUDPR a  ont:UniqueDeliveryPointReference ; 
+	ies:representationValue "100023336956"^^xsd:string .

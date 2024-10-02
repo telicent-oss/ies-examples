@@ -1,0 +1,73 @@
+@prefix ies:     <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix iso8601: <http://iso.org/iso8601#> .
+@prefix data:    <http://example.com/local-data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+data:observation1   a     ies:Observation .
+data:observation2   a     ies:Observation .
+
+data:observer1      a     ies:Observed ;
+	ies:isParticipantIn   data:observation1 ;
+	ies:isParticipationOf data:aircraftState1 .
+
+data:observer2      a     ies:Observed ;
+	ies:isParticipantIn   data:observation2 ;
+	ies:isParticipationOf data:aircraftState2 .
+
+data:aircraft       a     ies:Aircraft ;
+	ies:isIdentifiedBy    data:aircraftRegID .
+	
+data:aircraftRegID  a     ies:RegistrationNumber .
+	ies:representationValue "G-ABCD"^^xsd:string .
+
+data:aircraftState1 a     ies:State ;
+	ies:isStateOf 	      data:aircraft ;
+	ies:inLocation 	      data:location1 ;
+	ies:inPeriod 	      iso8601:20230326T123804 .
+    
+data:aircraftState2 a     ies:State ;
+	ies:isStateOf 	      data:aircraft ;
+	ies:inLocation 	      data:location2 ;
+	ies:inPeriod 	      iso8601:20230326T123722 .
+
+iso8601:20230326T123804 a ies:ParticularPeriod ;
+	ies:iso8601PeriodRepresentation "2023-03-26T12:38:04"^^xsd:dateTime .
+
+iso8601:20230326T123722 a ies:ParticularPeriod ;
+	ies:iso8601PeriodRepresentation "2023-03-26T12:37:22"^^xsd:dateTime .
+
+data:location1      a     ies:Location ;
+	ies:isIdentifiedBy 	  data:lat1 ;
+	ies:isIdentifiedBy 	  data:long1 ;
+	ies:hasCharacteristic data:altitude1 .
+
+data:location2      a     ies:Location ;
+	ies:isIdentifiedBy 	  data:lat2 ;
+	ies:isIdentifiedBy 	  data:long2 ;
+	ies:hasCharacteristic data:altitude2 .
+
+data:lat1           a     ies:Latitude  ;
+	ies:representationValue "51.345895"^^xsd:decimal .
+
+data:long1          a     ies:Longitude ;
+	ies:representationValue "1.18312"^^xsd:decimal .
+
+data:altitude1      a     ies:Altitude ;
+	ies:hasValue data:vim1 .
+
+data:vim1           a     ies:ValueInMetres ;
+	ies:representationValue "5000"^^xsd:integer .
+
+data:lat2           a     ies:Latitude ;
+	ies:representationValue "51.2475245"^^xsd:decimal .
+
+data:long2          a     ies:Longitude ;
+	ies:representationValue "-1.1831117"^^xsd:decimal .
+
+data:altitude2      a     ies:Altitude ;
+	ies:hasValue data:vim2 .
+
+data:vim2           a     ies:ValueInMetres ;
+	ies:representationValue "4000"^^xsd:integer .
+

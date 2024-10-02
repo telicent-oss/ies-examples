@@ -1,0 +1,41 @@
+@prefix ies: <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix iso8601: <http://iso.org/iso8601#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ont: <http://example.com/local-ontology#> .
+@prefix data: <http://example.com/local-data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ont:CheifExecutiveOfficer rdfs:subClassOf ies:Post .
+
+data:person_1       a   ies:Person .
+data:person_2       a   ies:Person .
+data:acme_limited   a   ies:Organisation .
+
+data:ceo_at_acme    a   ont:CheifExecutiveOfficer ;
+    ies:isPartOf        data:acme_limited .
+
+data:person_1_as_acme_ceo a     ies:InPost ;
+    ies:isStateOf   data:person_1 ;
+    ies:isPartOf    data:ceo_at_acme .
+
+data:person_2_as_acme_ceo a     ies:InPost ;
+    ies:isStateOf   data:person_2 ;
+    ies:isPartOf    data:ceo_at_acme .
+
+data:person_1_as_acme_ceo_start a   ies:BoundingState ;
+    ies:isStartOf   data:person_1_as_acme_ceo ;
+    ies:inPeriod    iso8601:20200521 .
+
+data:person_1_as_acme_ceo_end   a   ies:BoundingState ;
+    ies:isEndOf     data:originalCEOInPost ;
+    ies:inPeriod    iso8601:20220926 .
+
+data:person_2_as_acme_ceo_start a   ies:BoundingState ;
+    ies:isStartOf   data:person_2_as_acme_ceo ;
+    ies:inPeriod    iso8601:20220926 .
+
+iso8601:20200521    a   ies:ParticularPeriod ;
+    ies:iso8601PeriodRepresentation "2020-05-21"^^xsd:dateTime .
+
+iso8601:20200926    a   ies:ParticularPeriod ;
+    ies:iso8601PeriodRepresentation "2020-09-26"^^xsd:dateTime .

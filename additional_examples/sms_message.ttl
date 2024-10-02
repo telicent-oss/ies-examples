@@ -1,0 +1,23 @@
+@prefix data: <http://example.com/local-data#> .
+@prefix ies: <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:personA a ies:Person .
+data:personB a ies:Person .
+
+data:personAinCommunication     a   ies:PersonInCommunication ;
+    ies:isParticipationOf           data:personA ;
+    ies:isParticipantIn             data:senderEvent .
+
+data:personBinCommunication     a   ies:PersonInCommunication ;
+    ies:isParticipationOf           data:personB ;
+    ies:isParticipantIn             data:recipientEvent .
+
+data:senderEvent                a   ies:Sender ;
+    ies:isPartOf                    data:messageEvent .
+
+data:recipientEvent             a   ies:Recipient ;
+    ies:isPartOf                    data:messageEvent .
+
+data:messageEvent               a   ies:SMS ;
+    ies:messageContent "Hello"^^xsd:string .

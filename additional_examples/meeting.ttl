@@ -1,0 +1,31 @@
+
+@prefix ies: <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix iso8601: <http://iso.org/iso8601#> .
+@prefix data: <http://example.com/local-data#> .
+
+data:Fred a         ies:Person ;
+    ies:hasName     data:FredName .
+
+data:FredName a     ies:PersonName ;
+    ies:representationValue "Fred"^^xsd:string .
+
+data:Gary a         ies:Person ;
+    ies:hasName     data:GaryName .
+
+data:GaryName a     ies:PersonName ;
+    ies:representationValue "Gary"^^xsd:string .
+
+data:FredAttendance a       ies:Attendance ;
+    ies:isParticipationOf	data:Fred ;
+    ies:isParticipantIn     data:FredGaryMeeting .
+
+data:GaryAttendance a       ies:Attendance ;
+    ies:isParticipationOf   data:Gary ;
+    ies:isParticipantIn 	data:FredGaryMeeting .
+
+data:FredGaryMeeting a      ies:Meeting ;
+    ies:inPeriod            iso8601:20301007 .
+
+iso8601:20301007 a          ies:ParticularPeriod ;
+    ies:iso8601PeriodRepresentation "2030-10-07"^^xsd:dateTime .
