@@ -20,37 +20,37 @@ data:VladInMeeting a ies:Attendance ;
   ies:isParticipationOf data:Vladimir .
 
 data:MeetingStart a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A00Z ;
+  ies:inPeriod iso8601:20180723T1000 ;
   ies:isStartOf data:TeamMeeting .
 data:MeetingEnd a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T13%3A00Z ;
+  ies:inPeriod iso8601:20180723T1300 ;
   ies:isEndOf data:TeamMeeting .
 data:FredIntoMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A00Z ;
+  ies:inPeriod iso8601:20180723T1000 ;
   ies:isStartOf data:FredInMeeting .
 data:FredOutOfMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T13%3A00Z ;
+  ies:inPeriod iso8601:20180723T1300 ;
   ies:isEndOf data:FredInMeeting .
 data:BarryIntoMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A00Z ;
+  ies:inPeriod iso8601:20180723T1000 ;
   ies:isStartOf data:BarryInMeeting .
 data:BarryOutOfMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A12Z ;
+  ies:inPeriod iso8601:20180723T1012 ;
   ies:isEndOf data:BarryInMeeting .
 data:VladIntoMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A30Z ;
+  ies:inPeriod iso8601:20180723T1030 ;
   ies:isStartOf data:VladInMeeting .
 data:VladOutOfMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T12%3A30Z ;
+  ies:inPeriod iso8601:20180723T1230 ;
   ies:isEndOf data:VladInMeeting .
 
-iso8601:2018-07-23T10%3A00Z a ies:ParticularPeriod ;
+iso8601:20180723T1000 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-07-23T10:00"^^xsd:string .
-iso8601:2018-07-23T10%3A30Z a ies:ParticularPeriod ;
+iso8601:20180723T1030 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-07-23T10:30"^^xsd:string .
-iso8601:2018-07-23T10%3A12Z a ies:ParticularPeriod ;
+iso8601:20180723T1012 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-07-23T10:12"^^xsd:string .
-iso8601:2018-07-23T12%3A30Z a ies:ParticularPeriod ;
+iso8601:20180723T1230 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-07-23T12:30"^^xsd:string .
-iso8601:2018-07-23T13%3A00Z a ies:ParticularPeriod ;
+iso8601:20180723T1300 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-07-23T13:00"^^xsd:string .

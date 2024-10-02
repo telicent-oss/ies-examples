@@ -10,13 +10,13 @@ data:LK176LPX a ies:RoadVehicle .
 data:LHR a ies:Airport .
 data:LAX a ies:Airport .
 
-iso8601:2018-08-12T05%3A30Z a ies:ParticularPeriod ;
+iso8601:20180812T0530 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-08-12T05:30"^^xsd:string .
-iso8601:2018-08-12T06%3A45Z a ies:ParticularPeriod ;
+iso8601:20180812T0645 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-08-12T06:45"^^xsd:string .
-iso8601:2018-08-12T08%3A30Z a ies:ParticularPeriod ;
+iso8601:20180812T0830 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-08-12T08:30"^^xsd:string .
-iso8601:2018-08-12T14%3A40Z a ies:ParticularPeriod ;
+iso8601:20180812T1440 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2018-08-12T14:40"^^xsd:string .
 
 data:FredJourney a ies:Journey .
@@ -39,7 +39,7 @@ data:FredDrivesToLHR a ies:CarTravel ;
 
 data:FredDepartHome a ies:Departure ;
   ies:isStartOf data:FredDrivesToLHR ;
-  ies:inPeriod iso8601:2018-08-12T05%3A30Z ;
+  ies:inPeriod iso8601:20180812T0530 ;
   ies:inLocation data:FredsHouse .
 
 data:LK176LPXtoLHR a ies:VehicleUsed ;
@@ -48,7 +48,7 @@ data:LK176LPXtoLHR a ies:VehicleUsed ;
 
 data:FredArriveLHR a ies:Arrival ;
   ies:isEndOf data:FredDrivesToLHR ;
-  ies:inPeriod iso8601:2018-08-12T06%3A45Z ;
+  ies:inPeriod iso8601:20180812T0645 ;
   ies:inLocation data:LHR .
 
 data:BA856%402017-12-01 a ies:Flight ;
@@ -56,7 +56,7 @@ data:BA856%402017-12-01 a ies:Flight ;
 
 data:FredDepartLHR a ies:Departure ;
   ies:isStartOf data:BA856%402017-12-01 ;
-  ies:inPeriod iso8601:2018-08-12T08%3A30Z ;
+  ies:inPeriod iso8601:20180812T0830 ;
   ies:inLocation data:LHR .
 
 data:BA856 a ies:TravelService ;
@@ -65,5 +65,5 @@ data:BA856 a ies:TravelService ;
 
 data:FredArriveLAX a ies:Arrival ;
   ies:isEndOf data:BA856%402017-12-01 ;
-  ies:inPeriod iso8601:2018-08-12T14%3A40Z ;
+  ies:inPeriod iso8601:20180812T1440 ;
   ies:inLocation data:LAX .

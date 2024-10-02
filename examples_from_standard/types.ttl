@@ -14,5 +14,5 @@ data:All_AppleIPhone7Plus_Built_From_Nov_2016 a ies:TimeBoundedClass ;
 data:1111-2222-3333-5555 a ies:MobileHandset ,
                            ies:AppleIPhone7Plus .
 
-iso8601:2016-11-01 a ies:ParticularPeriod ;
+iso8601:20161101 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2016-11-01"^^xsd:string .

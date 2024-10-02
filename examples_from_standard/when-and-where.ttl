@@ -6,23 +6,23 @@
 
 data:Fred a ies:Person .
 data:FredBorn a ies:BirthState ;
-  ies:inPeriod iso8601:1984-09-21T21%3A04 ;
+  ies:inPeriod iso8601:19840921T2104 ;
   ies:inLocation data:UniversityHospital ;
   ies:isStartOf data:Fred .
 data:FredAtMedical a ies:PersonState ;
-  ies:inPeriod iso8601:1991-03-06T11%3A30 ;
+  ies:inPeriod iso8601:19910306T1130 ;
   ies:inLocation data:AcmeHealthCentre ;
   ies:isStateOf data:Fred .
 data:FredAtFatFighters a ies:PersonState ;
-  ies:inPeriod iso8601:2014-12-18T18%3A10 ;
+  ies:inPeriod iso8601:20141218T1810 ;
   ies:inLocation data:FatFightersClub ;
   ies:isStateOf data:Fred .
 
-iso8601:1984-09-21T21%3A04 a ies:ParticularPeriod ;
+iso8601:19840921T2104 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "1984-09-21T21:04"^^xsd:string .
-iso8601:1991-03-06T11%3A30 a ies:ParticularPeriod ;
+iso8601:19910306T1130 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "1991-03-06T11:30"^^xsd:string .
-iso8601:2014-12-18T18%3A10 a ies:ParticularPeriod ;
+iso8601:20141218T1810 a ies:ParticularPeriod ;
   ies:iso8601PeriodRepresentation "2014-12-18T18:10"^^xsd:string .
 
 data:UniversityHospital a ies:Facility .
