@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ies: <http://ies.data.gov.uk/ontology/ies4#> . 
+@prefix data: <http://data.gov.uk/testdata#> .
+@prefix iso8601: <http://iso.org/iso8601#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:Fred a ies:Person .
+data:FredBorn a ies:BirthState ;
+  ies:inPeriod iso8601:19840921T2104 ;
+  ies:inLocation data:UniversityHospital ;
+  ies:isStartOf data:Fred .
+data:FredAtMedical a ies:PersonState ;
+  ies:inPeriod iso8601:19910306T1130 ;
+  ies:inLocation data:AcmeHealthCentre ;
+  ies:isStateOf data:Fred .
+data:FredAtFatFighters a ies:PersonState ;
+  ies:inPeriod iso8601:20141218T1810 ;
+  ies:inLocation data:FatFightersClub ;
+  ies:isStateOf data:Fred .
+
+iso8601:19840921T2104 a ies:ParticularPeriod ;
+  ies:iso8601PeriodRepresentation "1984-09-21T21:04"^^xsd:dateTime .
+iso8601:19910306T1130 a ies:ParticularPeriod ;
+  ies:iso8601PeriodRepresentation "1991-03-06T11:30"^^xsd:dateTime .
+iso8601:20141218T1810 a ies:ParticularPeriod ;
+  ies:iso8601PeriodRepresentation "2014-12-18T18:10"^^xsd:dateTime .
+
+data:UniversityHospital a ies:Facility .
+data:AcmeHealthCentre a ies:Facility .
+data:FatFightersClub a ies:Facility .
