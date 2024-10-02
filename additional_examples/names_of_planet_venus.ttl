@@ -1,0 +1,16 @@
+@prefix ont: <http://example.com/local-ontology#> .
+@prefix data: <http://example.com/local-data#> .
+
+ont:Planet rdfs:subClassOf ies:Entity .
+
+data:venus a telicent:Planet ;
+    ies:hasName data:morning_star_name ;
+    ies:hasName data:evening_star_name ;
+    ies:hasName data:offical_venus_name .
+
+data:morning_star_name a ies:Name ;
+    ies:representationValue "Morning Star" .
+data:evening_star_name a ies:Name ;
+    ies:representationValue "Evening Star" .
+data:offical_venus_name a ies:Name ;
+    ies:representationValue "Venus" .

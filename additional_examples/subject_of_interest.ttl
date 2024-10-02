@@ -1,0 +1,57 @@
+@prefix ies: <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix iso8601: <http://iso.org/iso8601#> .
+@prefix data: <http://example.com/local-data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:Bindi a ies:Person .
+data:Charlie a ies:Person .
+data:Alice a ies:Person .
+data:Canberra a ies:Location .
+
+data:AliceSubjectofInterest a ies:SubjectOfInterest ;
+	ies:isStateOf data:Alice .
+
+data:AlicePersonState a ies:PersonState ;
+	ies:isStateOf 	data:Alice ;
+	ies:inLocation 	data:Canberra .
+
+data:BindiAssessToBeTrue a ies:AssessToBeTrue ;
+	ies:inPeriod 	iso8601:20231010T1305 ;
+	ies:assess 		data:AlicePersonState .
+
+data:CharlieAssessToBeTrue a ies:AssessToBeTrue ;
+	ies:inPeriod 	iso8601:20231011T1008 ;
+	ies:assess 		data:AliceSubjectofInterest .
+
+data:BindiAssessor a ies:Assessor ;
+	ies:isParticipantIn 	data:BindiAssessToBeTrue ;
+	ies:isParticipationOf 	data:Bindi .
+
+data:CharlieAssessor a ies:Assessor ;
+	ies:isParticipantIn 	data:CharlieAssessToBeTrue ;
+	ies:isParticipationOf 	data:Charlie .
+
+data:BindiBoundingState1 a ies:BoundingState ;
+	ies:isStartOf 	data:AlicePersonState ;
+	ies:inPeriod 	iso8601:20231007T0800 .
+
+data:BindiBoundingState2 a ies:BoundingState ;
+	ies:isEndOf 		data:AlicePersonState ;
+	ies:inPeriod 		iso8601:20231007T1500 .
+
+data:CharlieBoundingState a ies:BoundingState ;
+	ies:isStartOf 	data:AliceSubjectofInterest ;
+	ies:inPeriod 	iso8601:20231007T0800 .
+
+iso8601:20231010T1305 a ies:ParticularPeriod ;
+	ies:iso8601PeriodRepresentation "2023-10-10T13:05"^^xsd:dateTime .
+
+
+iso8601:20231011T1008 a ies:ParticularPeriod ;
+	ies:iso8601PeriodRepresentation "2023-10-11-T10:08"^^xsd:dateTime .
+
+iso8601:20231007T0800 a ies:ParticularPeriod ;
+	ies:iso8601PeriodRepresentation "2023-10-07T08:00"^^xsd:dateTime .
+
+iso8601:20231007T1500 a ies:ParticularPeriod ;
+	ies:iso8601PeriodRepresentation "2023-10-07T15:00"^^xsd:dateTime .

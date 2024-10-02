@@ -1,0 +1,63 @@
+@prefix ies:     <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix iso8601: <http://iso.org/iso8601#> .
+@prefix data:    <http://example.com/local-data#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+
+data:ship       a       ies:Ship .
+
+data:movement   a       ies:Movement .
+
+data:moving1    a       ies:Moving ;
+    ies:inLocation      data:geopoint1 ;
+    ies:isParticipantIn data:movement ;
+    ies:isParticipationOf data:ship ;
+    ies:inPeriod        iso8601:20231007T0800 .
+
+data:moving2    a       ies:Moving ;
+    ies:inLocation      data:geopoint2 ;
+    ies:isParticipantIn data:movement ;
+    ies:isParticipationOf data:ship ;
+    ies:inPeriod        iso8601:20231007T1100 .
+
+data:moving3    a       ies:Moving ;
+    ies:inLocation      data:geopoint3 ;
+    ies:isParticipantIn data:movement ;
+    ies:isParticipationOf data:ship ;
+    ies:inPeriod        iso8601:20231007T1500 .
+
+data:geopoint1  a       ies:GeoPoint ;
+    ies:isIdentifiedBy  data:latutide1 ;
+    ies:isIdentifiedBy  data:longitude1 .
+
+data:latitude1  a       ies:Latitude ;
+    ies:representationValue "51.1175"^^xsd:decimal .
+data:longitude1 a       ies:Longitude ;
+    ies:representationValue "1.3223"^^xsd:decimal .
+
+data:geopoint2  a       ies:GeoPoint ;
+    ies:isIdentifiedBy  data:latutide2 ;
+    ies:isIdentifiedBy  data:longitude2 .
+
+data:latitude2  a       ies:Latitude ;
+    ies:representationValue "50.6927"^^xsd:decimal .
+data:longitude2 a       ies:Longitude ;
+    ies:representationValue "-1.3040"^^xsd:decimal .
+
+data:geopoint3  a       ies:GeoPoint ;
+    ies:isIdentifiedBy  data:latutide3 ;
+    ies:isIdentifiedBy  data:longitude3 .
+
+data:latitude3  a       ies:Latitude ;
+    ies:representationValue "49.6454"^^xsd:decimal .
+data:longitude3 a       ies:Longitude ;
+    ies:representationValue "-1.6091"^^xsd:decimal .
+
+iso8601:20231007T0800 a ies:ParticularPeriod ;
+    ies:iso8601PeriodRepresentation "2023-10-07T08:00"^^xsd:dateTime .
+
+iso8601:20231007T1100 a ies:ParticularPeriod ;
+    ies:iso8601PeriodRepresentation "2023-10-07T11:00"^^xsd:dateTime .
+
+iso8601:20231007T1500 a ies:ParticularPeriod ;
+    ies:iso8601PeriodRepresentation "2023-10-07T15:00"^^xsd:dateTime .

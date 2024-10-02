@@ -1,0 +1,32 @@
+@prefix data: <http://example.com/local-data#> .
+@prefix ies: <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix iso8601: <http://iso.org/iso8601#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:handset_1 a ies:MobileHandset .
+data:handset_2 a ies:MobileHandset .
+data:simcard_a a ies:SIMCard .
+
+iso8601:20230101    a	ies:ParticularPeriod ;
+	ies:iso8601PeriodRepresentation "2023-01-01"^^xsd:dateTime .
+
+iso8601:20230101    a   ies:ParticularPeriod ;
+	ies:iso8601PeriodRepresentation "2023-11-01"^^xsd:dateTime .
+
+data:handset_1_state_1 a	ies:DeviceState ;
+	ies:inPeriod		iso8601:20230101 ;
+	ies:isStateOf		data:handset_1 .
+
+data:simcard_a_state_1 a    ies:DeviceState ;
+	ies:inPeriod		iso8601:20230101 ;
+	ies:isStateOf		data:simcard_a;
+	ies:isPartOf 		data:handset_1_state_1 .
+
+data:handset2_state_2 a     ies:DeviceState ;
+	ies:inPeriod		iso8601:20231101 ;
+	ies:isStateOf		data:handset_2 .
+
+data:simcard_a_state_2 a    ies:DeviceState ;
+	ies:inPeriod 		iso8601:20231101 ;
+	ies:isStateOf 		data:simcard_a ;
+	ies:isPartOf 		data:handset_1_state_2 .
