@@ -15,4 +15,4 @@ data:1111-2222-3333-5555 a ies:MobileHandset ,
                            ies:AppleIPhone7Plus .
 
 iso8601:20161101 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2016-11-01"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2016-11-01"^^xsd:dateTime .

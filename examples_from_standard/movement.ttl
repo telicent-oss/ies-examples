@@ -11,13 +11,13 @@ data:LHR a ies:Airport .
 data:LAX a ies:Airport .
 
 iso8601:20180812T0530 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-08-12T05:30"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-08-12T05:30"^^xsd:dateTime .
 iso8601:20180812T0645 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-08-12T06:45"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-08-12T06:45"^^xsd:dateTime .
 iso8601:20180812T0830 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-08-12T08:30"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-08-12T08:30"^^xsd:dateTime .
 iso8601:20180812T1440 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-08-12T14:40"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-08-12T14:40"^^xsd:dateTime .
 
 data:FredJourney a ies:Journey .
 

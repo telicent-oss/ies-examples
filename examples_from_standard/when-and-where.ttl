@@ -19,11 +19,11 @@ data:FredAtFatFighters a ies:PersonState ;
   ies:isStateOf data:Fred .
 
 iso8601:19840921T2104 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "1984-09-21T21:04"^^xsd:string .
+  ies:iso8601PeriodRepresentation "1984-09-21T21:04"^^xsd:dateTime .
 iso8601:19910306T1130 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "1991-03-06T11:30"^^xsd:string .
+  ies:iso8601PeriodRepresentation "1991-03-06T11:30"^^xsd:dateTime .
 iso8601:20141218T1810 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2014-12-18T18:10"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2014-12-18T18:10"^^xsd:dateTime .
 
 data:UniversityHospital a ies:Facility .
 data:AcmeHealthCentre a ies:Facility .

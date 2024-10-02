@@ -45,12 +45,12 @@ data:VladOutOfMeeting a ies:BoundingState ;
   ies:isEndOf data:VladInMeeting .
 
 iso8601:20180723T1000 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-07-23T10:00"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-07-23T10:00"^^xsd:dateTime .
 iso8601:20180723T1030 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-07-23T10:30"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-07-23T10:30"^^xsd:dateTime .
 iso8601:20180723T1012 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-07-23T10:12"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-07-23T10:12"^^xsd:dateTime .
 iso8601:20180723T1230 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-07-23T12:30"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-07-23T12:30"^^xsd:dateTime .
 iso8601:20180723T1300 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "2018-07-23T13:00"^^xsd:string .
+  ies:iso8601PeriodRepresentation "2018-07-23T13:00"^^xsd:dateTime .

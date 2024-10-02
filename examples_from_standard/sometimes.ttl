@@ -10,9 +10,9 @@ data:LK176LPX_in_Acacia_Gardens a ies:DiscontinuousState ;
   ies:isStateOf data:LK176LPX ;
   ies:inLocation data:Acacia_Gardens .
 iso8601:19870601T0900 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "1987-06-01T09:00"^^xsd:string .
+  ies:iso8601PeriodRepresentation "1987-06-01T09:00"^^xsd:dateTime .
 iso8601:19870901T2104 a ies:ParticularPeriod ;
-  ies:iso8601PeriodRepresentation "1987-09-01T21:04"^^xsd:string .
+  ies:iso8601PeriodRepresentation "1987-09-01T21:04"^^xsd:dateTime .
 data:LK176LPX_starts_parking a ies:BoundingState ;
   ies:isStartOf data:LK176LPX_in_Acacia_Gardens ;
   ies:inPeriod iso8601:19870601T0900 .
