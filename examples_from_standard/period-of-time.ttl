@@ -2,6 +2,7 @@
 @prefix ies: <http://ies.data.gov.uk/ontology/ies4#> . 
 @prefix data: <http://data.gov.uk/testdata#> .
 @prefix iso8601: <http://iso.org/iso8601#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 data:Fred a ies:Person .
 data:FredState2 a ies:PersonState ;
